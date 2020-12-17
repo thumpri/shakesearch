@@ -10,7 +10,7 @@ import (
 	"net/http"
 	"os"
 )
-
+//just setting the project
 func main() {
 	searcher := Searcher{}
 	err := searcher.Load("completeworks.txt")
