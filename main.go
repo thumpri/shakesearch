@@ -76,13 +76,11 @@ func (s *Searcher) Load(filename string) error {
 
 func (s *Searcher) Search(query string) []string {
 	idxs := s.SuffixArray.Lookup([]byte(query), -1)
-    for _, off := range idxs {
-    		fmt.Println(off)
-    	}
 	results := []string{}
 	for _, idx := range idxs {
-		results = append(results, s.CompleteWorks[idx-250:idx+250])
-		//fmt.Println(s.CompleteWorks[idx-1:idx+1])
+		results = append(results, s.CompleteWorks[idx-150:idx+150])
+		//temp :=  s.CompleteWorks[idx-250:idx+250]
+		//fmt.Println(temp[250:255])
 	}
 	return results
 }
