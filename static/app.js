@@ -16,6 +16,8 @@ const Controller = {
     const table = document.getElementById("table-body");
     const rows = [];
     const c = q.length;
+    const totalResults = results.length;
+    count.innerHTML = `Total matches ${totalResults}`
     for (let result of results) {
       const start = result.substring(0,150);
       const word = result.substring(150,150+c);
